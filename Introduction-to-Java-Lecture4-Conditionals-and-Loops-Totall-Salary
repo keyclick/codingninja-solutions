@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s = new Scanner(System.in);
+        
+        int al,ts;
+       /* double pf = 0.11*ba; 
+        double hr = 0.20*ba;
+        double da = 0.50*ba;*/
+        
+        int ba = s.nextInt();
+        String g = s.next();
+        char c = g.charAt(0); 
+                
+        if(c=='A'){
+        	al=1700;
+        } else if(c=='B'){
+        	al=1500;
+        } else{al=1300;}
+            
+        double sa = ba + (0.20*ba) + (0.50*ba) + al - (0.11*ba); 
+        double r=Math.round(sa);
+        ts=(int)(r);
+        System.out.println(ts);
+        
+        
+	}
+}
